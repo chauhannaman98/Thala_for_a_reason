@@ -1,5 +1,6 @@
 let form = document.getElementById('form');
 let music = new Audio('/media/Thala.mp3');
+let vid = document.getElementById("ThalaVid");
 
 function checkForThala(text)    {
     // check if it's a number
@@ -13,7 +14,7 @@ function checkForThala(text)    {
             return true;
     }
     // check for length of text
-    // text = text.trim;
+    text = text.trim();
     if(text.length === 7)
         return true;
     else
@@ -22,6 +23,7 @@ function checkForThala(text)    {
 
 function updateHeading(text, result)  {
     // update the heading
+    text = text.trim();
     let arr = text.split('');
     if (result)
         outString = "Yes! Because.. " + arr[0];
@@ -40,15 +42,16 @@ form.addEventListener('submit', (event) => {
     let text = document.getElementById('text').value;
     result = checkForThala(text);
     if(result){
-        console.log("Thala for a Reason!");
-
-        // play the sound/video
-        music.play();
+        // music.play();
+        vid.style.visibility = "visible";
+        vid.play();
     }
     else    {
-        console.log("Better luck next time!");
-        music.pause();
-        music.currentTime = 0;
+        // music.pause();
+        // music.currentTime = 0;
+        vid.style.visibility = "hidden";
+        vid.pause();
+        vid.currentTime = 0;
     }
 
     updateHeading(text, result);

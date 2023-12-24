@@ -62,15 +62,21 @@ body    {
 }
 
 .output {
-    border: 1px solid black;
     height: 70vh;
     width: 100vmin;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
 }
 
+video   {
+    height: 70vh;
+    width: 100vmin;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+    visibility: hidden;
+}
+
 footer  {
-    border: 1px solid black;
     background-color: #0065BC;
     font-family: 'Barlow';
     display: flex;

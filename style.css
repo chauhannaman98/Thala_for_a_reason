@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;1,900&display=swap');
+
+*   {
+    margin: 0;
+    padding: 0;
+}
+
+body    {
+    background-color: #FFCB05;
+}
+
+.heading  {
+    font-size: 5vh;
+    text-align: center;
+    margin: 3vh;
+    font-family: 'Barlow', sans-serif;
+}
+
+.head-container {
+    border-bottom: 5px solid #0065BC;
+    width: 100%;
+}
+
+.container  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form  {
+    background-color: #0065BC;
+    border-radius: 0vh 0vh 2.2vh 2.2vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 10vh;
+    width: 50vw;
+    padding: 1vh;
+}
+
+#text   {
+    width: 35vw;
+    height: 10vw;
+    margin-bottom: 1vh;
+    text-align: center;
+    font-family: 'Barlow';
+    font-size: 2.2vh;
+    text-decoration: solid;
+    color: #E9530D;
+    border-radius: 1vw;
+}
+
+#btn    {
+    height: 10vw;
+    width: 20vw;
+    background-color: #E9530D;
+    color: #FFCB05;
+    font-family: "Barlow";
+    font-size: 1.8vh;
+    border-radius: 1vw;
+}
+
+.output {
+    border: 1px solid black;
+    height: 70vh;
+    width: 100vmin;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+
+footer  {
+    border: 1px solid black;
+    background-color: #0065BC;
+    font-family: 'Barlow';
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+a   {
+    color: white;
+}

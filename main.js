@@ -1,41 +1,53 @@
 let form = document.getElementById('form');
 let music = new Audio('/media/Thala.mp3');
 let vid = document.getElementById("ThalaVid");
+let outString = "";
+
 
 function checkForThala(text)    {
-    // check if it's a number
+    text = text.trim();
+    let arr = text.split('');
     num = +text;
     if(num)    {
         let sum = 0;
         // check for sum of digits
         for (let digit of text)
             sum += parseInt(digit);
-        if (sum === 7)
+        if (sum === 7)  {
+            outString = "Yes! Because.. " + arr[0];
+            for(let i=1; i<arr.length; i++) {
+                outString += " + " + arr[i];
+            }
+            outString += " = 7\nThala for a reason!";
             return true;
+        }
     }
-    // check for length of text
-    text = text.trim();
-    if(text.length === 7)
+    // check for word "seven"
+    if(text.toLowerCase()==="seven")    {
+        outString = "Yes! Because.. " + text + " = 7\nThala for a reason!";
         return true;
-    else
-        return false;
+    }
+    else    {
+        // check for length of text
+        if(text.length === 7)   {
+            outString = "Yes! Because.. " + arr[0];
+            for(let i=1; i<arr.length; i++) {
+                outString += " + " + arr[i];
+            }
+            outString += " = 7\nThala for a reason!";
+            return true;
+        }
+        else    {
+            outString = "Opss.. " + arr[0];
+            for(let i=1; i<arr.length; i++) {
+                outString += " + " + arr[i];
+            }
+            outString += " ≠ 7";
+            return false;
+        }
+    }
 }
 
-function updateHeading(text, result)  {
-    // update the heading
-    text = text.trim();
-    let arr = text.split('');
-    if (result)
-        outString = "Yes! Because.. " + arr[0];
-    else
-        outString = "Opss.. " + arr[0];
-    for(let i=1; i<arr.length; i++) {
-        outString += " + " + arr[i];
-    }
-    (result)?outString += " = 7\nThala for a reason!":outString += " ≠ 7";
-    let heading = document.querySelector(".heading");
-    heading.innerText = outString;
-} 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -54,6 +66,7 @@ form.addEventListener('submit', (event) => {
         vid.currentTime = 0;
     }
 
-    updateHeading(text, result);
+    let heading = document.querySelector(".heading");
+    heading.innerText = outString;
 });
 

@@ -1,0 +1,37 @@
+@media (max-width: 825px)   {
+    .form   {
+        width: 85vw;
+        height: 12vh;
+    }
+
+    #text   {
+        width: 80vw;
+    }
+
+    #btn    {
+        width: 50vw;
+    }
+
+    .heading    {
+        font-size: 3vh;
+        margin: 2vh 2vh 2vh 2vh;
+    }
+
+    .head-container {
+        height: 15vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .output {
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    video   {
+        height: 55vh;
+    }
+}
